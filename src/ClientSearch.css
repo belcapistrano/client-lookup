@@ -1,0 +1,198 @@
+/* ClientSearch.css */
+
+/* Global styles and variables */
+:root {
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --secondary-color: #f3f4f6;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --text-light: #9ca3af;
+    --error-color: #ef4444;
+    --success-color: #10b981;
+    --border-color: #e5e7eb;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --radius: 0.375rem;
+    --transition: all 0.2s ease-in-out;
+  }
+  
+  /* Container styles */
+  .client-search-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Header styles */
+  .client-search-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .client-search-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .client-search-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+  }
+  
+  /* Search controls */
+  .search-controls {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Radio button group */
+  .search-type-selector {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background-color: var(--secondary-color);
+    border-radius: var(--radius);
+  }
+  
+  .search-type-option {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-type-option input[type="radio"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .search-type-option label {
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    cursor: pointer;
+  }
+  
+  /* Search input group */
+  .search-input-group {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .search-input {
+    flex-grow: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    transition: var(--transition);
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  
+  .search-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .search-button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  /* Search type indicator */
+  .search-type-indicator {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background-color: var(--secondary-color);
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  
+  .search-type-label {
+    font-weight: 600;
+  }
+  
+  /* Validation messages */
+  .validation-message {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--error-color);
+  }
+  
+  /* Results section */
+  .results-section {
+    margin-top: 2rem;
+  }
+  
+  .results-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .no-results-message {
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-light);
+  }
+  
+  /* Results table */
+  .results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .results-table th {
+    background-color: var(--secondary-color);
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .results-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+  }
+  
+  .results-table tr:hover {
+    background-color: rgba(243, 244, 246, 0.5);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .search-type-selector {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .search-input-group {
+      flex-direction: column;
+    }
+    
+    .search-button {
+      width: 100%;
+    }
+  }
