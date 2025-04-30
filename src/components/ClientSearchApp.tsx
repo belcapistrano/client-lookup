@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 // Import the custom CSS file
 import '../ClientSearch.css';
 
@@ -28,7 +28,7 @@ const ClientSearchApp = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchType, setSearchType] = useState('auto');
   const [detectedSearchType, setDetectedSearchType] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState<{ controlNumber: string; clientName: string }[]>([]);
   const [isSearched, setIsSearched] = useState(false);
 
   // Automatically detect search type based on input
