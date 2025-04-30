@@ -8,7 +8,7 @@ const clientsData = [
   { controlNumber: "23456", clientName: "ABC Aperture Science" },
   { controlNumber: "34567", clientName: "ABC Stark Industries" },
   { controlNumber: "45678", clientName: "Wayne Enterprises" },
-  { controlNumber: "56789", clientName: "Umbrella Corporation" },
+  { controlNumber: "56789", clientName: "Wayne Corporation" },
   { controlNumber: "67890", clientName: "Cyberdyne Systems" },
   { controlNumber: "78901", clientName: "Weyland-Yutani" },
   { controlNumber: "89012", clientName: "Tyrell Corporation" },
