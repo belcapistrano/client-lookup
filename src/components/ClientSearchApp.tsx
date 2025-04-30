@@ -82,8 +82,8 @@ const ClientSearchApp = () => {
   return (
     <div className="client-search-container">
       <div className="client-search-header">
-        <h1 className="client-search-title">Client Search</h1>
-        <p className="client-search-subtitle">Search by control number or client name</p>
+        <h1 className="client-search-title">Search</h1>
+        <p className="client-search-subtitle">Search by Number or Name</p>
       </div>
       
       <div className="search-controls">
@@ -109,7 +109,7 @@ const ClientSearchApp = () => {
               checked={searchType === 'controlNumber'}
               onChange={() => setSearchType('controlNumber')}
             />
-            <label htmlFor="controlNumber">Control Number</label>
+            <label htmlFor="controlNumber">Number</label>
           </div>
           
           <div className="search-type-option">
@@ -121,7 +121,7 @@ const ClientSearchApp = () => {
               checked={searchType === 'clientName'}
               onChange={() => setSearchType('clientName')}
             />
-            <label htmlFor="clientName">Client Name</label>
+            <label htmlFor="clientName">Name</label>
           </div>
         </div>
         
@@ -151,24 +151,24 @@ const ClientSearchApp = () => {
           <div className="search-type-indicator">
             <span className="search-type-label">Currently searching by: </span>
             {searchType === 'auto' ? (
-              detectedSearchType === 'controlNumber' ? 'Control Number (Auto)' : 
-              detectedSearchType === 'clientName' ? 'Client Name (Auto)' : 
+              detectedSearchType === 'controlNumber' ? 'Number (Auto)' : 
+              detectedSearchType === 'clientName' ? 'Name (Auto)' : 
               'Auto (Waiting for valid input)'
             ) : (
-              searchType === 'controlNumber' ? 'Control Number' : 'Client Name'
+              searchType === 'controlNumber' ? 'Number' : 'Name'
             )}
           </div>
         )}
         
         {searchType === 'controlNumber' && searchTerm && searchTerm.length < 5 && (
-          <p className="validation-message">Control number must be at least 5 digits</p>
+          <p className="validation-message">Number must be at least 5 digits</p>
         )}
         {(searchType === 'controlNumber' || (searchType === 'auto' && detectedSearchType === 'controlNumber')) && 
           searchTerm && !/^\d+$/.test(searchTerm) && (
-          <p className="validation-message">Control number must contain only numbers</p>
+          <p className="validation-message">Number must contain only numbers</p>
         )}
         {searchType === 'clientName' && searchTerm && searchTerm.length < 3 && (
-          <p className="validation-message">Client name must be at least 3 characters</p>
+          <p className="validation-message">Name must be at least 3 characters</p>
         )}
       </div>
 
@@ -177,14 +177,14 @@ const ClientSearchApp = () => {
           <h2 className="results-header">Search Results</h2>
           
           {searchResults.length === 0 ? (
-            <p className="no-results-message">No clients found matching your search criteria.</p>
+            <p className="no-results-message">No records found matching your search criteria.</p>
           ) : (
             <div className="results-table-container">
               <table className="results-table">
                 <thead>
                   <tr>
-                    <th>Control Number</th>
-                    <th>Client Name</th>
+                    <th>Number</th>
+                    <th>Name</th>
                   </tr>
                 </thead>
                 <tbody>
